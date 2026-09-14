@@ -12,7 +12,16 @@ endpoints:
   method: GET
   url: https://api.openaq.org/v3/locations?countries_id=207&limit=100
   path: /v3/locations
-  summary: LK monitoring locations (country id may change).
+  summary: 'PARK — OpenAQ v3 now requires a registered API key: confirmed
+    401 "A valid API key must be provided in the X-API-Key header" (verified
+    2026-09-14). This is a real API policy change, not a broken URL. Needs a
+    product decision + user action to un-park: (1) register a free key at
+    openaq.org, (2) add it as a GitHub Actions repo secret, (3) probe.py''s
+    generic harness would need to support injecting a secret-sourced header
+    per endpoint (it currently only supports static headers from this YAML,
+    which can''t safely hold a key in a public repo). Not doing this
+    unilaterally since it needs the user''s own account/key.'
+  status: parked
   pagination:
     style: limit_page
     params:
