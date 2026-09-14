@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-14
+
+- **Changed** `locations_lk`
+
 ## 2026-07-20
 
 - **Changed** `locations_lk` (GET `/v3/locations` · access `json_api`)
